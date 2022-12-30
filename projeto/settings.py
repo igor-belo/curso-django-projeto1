@@ -1,4 +1,5 @@
-from pathlib import Path, os
+import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -44,7 +45,9 @@ ROOT_URLCONF = 'projeto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'base_templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
